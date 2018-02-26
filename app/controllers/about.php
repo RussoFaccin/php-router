@@ -1,4 +1,6 @@
 <?php
+use \App\Router;
+
 $pageTitle = "About Page!";
 
-require('app/views/about.view.php');
+Router::view('about', ['pageTitle' => $pageTitle]);

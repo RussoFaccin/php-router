@@ -1,4 +1,5 @@
 <?php
-$pageTitle = "Home Page!";
+use \App\Router;
 
-require('app/views/home.view.php');
+$pageTitle = "Home Page";
+Router::view('home', ['pageTitle' => $pageTitle]);

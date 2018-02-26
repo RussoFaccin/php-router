@@ -21,7 +21,11 @@ class Router {
         if (array_key_exists($path, $this->$routes)) {
             require $this->$routes[$path];
         }else {
-            require 'app/views/404.php';
+            Router::view('404');
         }
+    }
+    static function view($filename, $data = []) {
+        extract($data);
+        return require "app/views/{$filename}.view.php";
     }
 }
