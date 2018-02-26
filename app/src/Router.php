@@ -21,7 +21,7 @@ class Router {
         if (array_key_exists($path, $this->$routes)) {
             require $this->$routes[$path];
         }else {
-            require 'views/404.php';
+            require 'app/views/404.php';
         }
     }
 }
