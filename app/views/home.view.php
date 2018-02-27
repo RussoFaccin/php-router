@@ -17,6 +17,11 @@
   </head>
   <body>
     <h1><?=$pageTitle?></h1>
+    <ul>
+      <?php foreach($names as $name): ?>
+        <li key="<?=$name['id']?>"><?=$name['name']?></li>
+      <?php endforeach; ?>
+    </ul>
 
     <!-- SCRIPTS -->
     <script src=""></script>
