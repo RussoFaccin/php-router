@@ -3,7 +3,7 @@ use App\Router;
 use App\DbInterface;
 use App\Utils;
 
-$pdo = DbInterface::connect();
+$pdo = DbInterface::connect('localhost', 'playground', 'root', 'root');
 
 $queryStr = "SELECT * FROM teste";
 $stmt = $pdo->prepare($queryStr);
